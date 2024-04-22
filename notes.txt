@@ -1,0 +1,12 @@
+- exclude ADMIN PRF
+- exclude POST DOC
+- include TCH FAC, LECTURER
+
+- Tenure Sys Fac = Professor + Assoc Professor + Asst Professor
+
+Specicialized = Teaching Faculty + Clinical Faculty + Research Faculty + Instructors + Lecturers + Visiting Faculty
+
+Academic Staff = Tenure Sys Fac + Post Docs + Specialized Faculty + Academic Professionals
+
+
+Acedemic Staff = Tenure Sys Fac + Specicialized Fac
