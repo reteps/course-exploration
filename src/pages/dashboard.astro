@@ -2,12 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Chart from '../components/Chart.svelte';
 import Daisy from '../components/Daisy.svelte';
+import RequirementExplorer from '../components/RequirementExplorer.svelte';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+	<main class="pl-20 pt-20">
 		<!-- <Chart client:only /> -->
-		<Daisy />
+            <RequirementExplorer client:only />
 	</main>
 </Layout>
 

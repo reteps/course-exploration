@@ -17,3 +17,40 @@ export interface IDataset {
 }
 
 export type DepartmentKeys = Array<keyof IDepartment>;
+
+interface Course {
+    number: string,
+    department: string
+}
+interface CourseCredit extends Course {
+    term: string,
+    year: number,
+    is_transfer: boolean,
+    semester: number
+}
+interface Subrequirement {
+    name: string,
+    subreq_number: number,
+    OK: boolean,
+    needs: {
+        hours: number,
+        courses: number,
+        course_list?: Course[]
+    },
+}
+interface Requirement {
+    name: string,
+    req_number: number,
+    OK: boolean,
+    needs: {
+        hours: number,
+        courses: number,
+        subreqs: number
+    },
+    subreqs: Subrequirement[]
+}
+export interface IAudit {
+    requirements: Requirement[],
+    student_id: string,
+    courses_taken: CourseCredit[]
+}
